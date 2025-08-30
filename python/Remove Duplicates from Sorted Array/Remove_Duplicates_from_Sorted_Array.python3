@@ -1,0 +1,15 @@
+from typing import List
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+        
+        # i là index của phần tử duy nhất đã xử lý
+        i = 0
+        for j in range(1, len(nums)):
+            if nums[j] != nums[i]:
+                i += 1
+                nums[i] = nums[j]
+        
+        return i + 1  # độ dài mới (vì i là index bắt đầu từ 0)
