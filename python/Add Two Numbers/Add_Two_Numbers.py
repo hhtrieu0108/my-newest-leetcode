@@ -35,10 +35,10 @@ class Solution:
         carry: int = 0
 
         while l1 or l2 or carry:
-            v1: int = l1.val if l1 else 0
-            v2: int = l2.val if l2 else 0
+            v1 = l1.val if l1 else 0
+            v2 = l2.val if l2 else 0
 
-            total: int = v1 + v2 + carry
+            total = v1 + v2 + carry
             carry = total // 10
             current.next = ListNode(total % 10)
 
